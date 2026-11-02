@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Montserrat', system-ui, sans-serif;
+    color: #1A1410;
+    background-color: #FAF7F0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    color: #1A1410;
+  }
+
+  h1, h2, h3, h4, .font-serif {
+    font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+    color: #140E0A;
+  }
+
+  p {
+    color: #382B23;
+  }
+
+  .font-display {
+    font-family: 'Cinzel', 'Cormorant Garamond', serif;
+  }
+}
+
+/* Custom smooth luxury scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF7F0;
+}
+::-webkit-scrollbar-thumb {
+  background: #DFCBB0;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C6A46A;
+}
+
+/* Refined luxury borders and decorative accents */
+.border-gold-subtle {
+  border-color: rgba(198, 164, 106, 0.28);
+}
+
+.gold-shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(198, 164, 106, 0) 0%,
+    rgba(198, 164, 106, 0.3) 50%,
+    rgba(198, 164, 106, 0) 100%
+  );
+  background-size: 200% 100%;
+}
+
+.glass-nav {
+  background-color: rgba(250, 247, 240, 0.94);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Image zoom effect for luxury product cards */
+.img-zoom-container {
+  overflow: hidden;
+}
+.img-zoom-container img {
+  transition: transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.img-zoom-container:hover img {
+  transform: scale(1.06);
+}
+
+/* Subtle line accents */
+.decorative-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+.decorative-line::before,
+.decorative-line::after {
+  content: '';
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #C6A46A, transparent);
+  flex: 1;
+  max-width: 80px;
+}
